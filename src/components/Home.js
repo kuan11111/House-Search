@@ -38,7 +38,7 @@ function Home() {
 
     return (
         <div className="home-container">
-            <h1 className="title">🏠 房屋買賣查詢</h1>
+            <h1 className="title">🏠 房屋實價登錄查詢</h1>
 
             <div className="form-group">
                 <label className="label">📍 選擇縣市：</label>

@@ -2,6 +2,7 @@
   "name": "real-estate-search",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kuan11111.github.io/House-Search",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

@@ -62,6 +62,50 @@
     transform: scale(1.02);
 }
 
+
+/* 按鈕組 */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 返回首頁按鈕 */
+.back-button,
+.refresh-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 返回首頁按鈕樣式 */
+.back-button {
+    background-color: #007bff;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* 重新查詢按鈕樣式 */
+.refresh-button {
+    background-color: #28a745;
+}
+
+.refresh-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
 /* 文字樣式 */
 .result-card p {
     margin: 5px 0;

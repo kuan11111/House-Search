@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/Results.css"; // 引入美化樣式
 
@@ -9,6 +9,7 @@ function useQuery() {
 
 function Results() {
     const query = useQuery();
+    const navigate = useNavigate(); // 用於返回首頁
     const city = query.get("city") || "";
     const district = query.get("district") || "";
     const maxPrice = query.get("max_price") || 9999999;
@@ -59,11 +60,29 @@ function Results() {
         return () => clearInterval(interval);
     }, [taskId]);
 
+    // 🔹 返回首頁
+    const goBack = () => {
+        navigate("/");
+    };
+
+    // 🔹 重新查詢（刷新當前頁面）
+    const refreshSearch = () => {
+        setResults([]);
+        setLoading(true);
+        setTaskId(null);
+        window.location.reload(); // 強制刷新頁面
+    };
+
     return (
         <div className="results-container">
-            <h1 className="title">🏡 買賣房屋查詢結果</h1>
+            <h1 className="title">🏡 房屋實價登錄查詢結果</h1>
             <div className="search-info">
                 <p>🔍 查詢條件：<strong>{city} {district}</strong>，最高價格：<strong>{maxPrice} 萬</strong></p>
+            </div>
+            {/* 🔹 返回 & 重新查詢按鈕 */}
+            <div className="button-group">
+                <button className="back-button" onClick={goBack}>🔙 返回首頁</button>
+                <button className="refresh-button" onClick={refreshSearch}>🔄 重新查詢</button>
             </div>
 
             {loading ? (
@@ -81,6 +100,8 @@ function Results() {
                     ))}
                 </div>
             )}
+
+
         </div>
     );
 }
