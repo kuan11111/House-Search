@@ -1,0 +1,69 @@
+/* 主容器 */
+.results-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 標題 */
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 查詢條件 */
+.search-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* 載入動畫 */
+.loading {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* 錯誤訊息 */
+.error-message {
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* 結果列表 */
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 單一房屋資訊卡片 */
+.result-card {
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.result-card:hover {
+    transform: scale(1.02);
+}
+
+/* 文字樣式 */
+.result-card p {
+    margin: 5px 0;
+    font-size: 18px;
+}
